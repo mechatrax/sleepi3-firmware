@@ -1,0 +1,26 @@
+#!/bin/sh
+# postrm script for sleepi3-firmware
+#
+# see: dh_installdeb(1)
+
+set -e
+
+OVERLAY=sleepi3
+CONFIG=/boot/config.txt
+
+case "$1" in
+    purge|remove|upgrade|failed-upgrade|abort-install|abort-upgrade|disappear)
+        if [ -e $CONFIG ]; then
+            sed $CONFIG -E -i -z -e "s@(^|\n)(device_tree_|dt)overlay=${OVERLAY}[^\n]*\n@\1@"
+        fi
+    ;;
+
+    *)
+        echo "postrm called with unknown argument \`$1'" >&2
+        exit 1
+    ;;
+esac
+
+#DEBHELPER#
+
+exit 0
