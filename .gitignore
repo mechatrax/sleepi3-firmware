@@ -6,5 +6,5 @@ debian/*.log
 debian/*.debhelper
 debian/*.substvars
 
-debian/sleepi2-firmware/*
+debian/sleepi3-firmware/*
 
