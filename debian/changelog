@@ -1,3 +1,9 @@
+sleepi3-firmware (1.0.1.1) bullseye; urgency=medium
+
+  * debian/control: Update architecture
+
+ -- Yuta Kiyonaga <kiyonaga@mechatrax.com>  Tue, 08 Feb 2022 15:42:28 +0900
+
 sleepi3-firmware (1.0.1) bullseye; urgency=medium
 
   * debian/compat: Deleted
