@@ -9,7 +9,7 @@ Vcs-browser: https://github.com/mechatrax/sleepi3-firmware
 Homepage: https://mechatrax.com/
 
 Package: sleepi3-firmware
-Architecture: armhf
+Architecture: armhf arm64
 Conflicts: sleepi-firmware, sleepi2-firmware
 Depends: ${misc:Depends}, libraspberrypi-bin (>= 1.20160506-1), raspberrypi-bootloader (>= 1.20160506-1), raspi-config (>= 20160506)
 Description: Device tree overlay binary for slee-Pi 3
