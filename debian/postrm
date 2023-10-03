@@ -11,7 +11,7 @@ CONFIG=/boot/config.txt
 case "$1" in
     purge|remove|upgrade|failed-upgrade|abort-install|abort-upgrade|disappear)
         if [ -e $CONFIG ]; then
-            sed $CONFIG -E -i -z -e "s@(^|\n)(device_tree_|dt)overlay=${OVERLAY}[^\n]*\n@\1@"
+	     sed $CONFIG -i -E -e  "/^(device_tree_|dt)overlay=${OVERLAY}.*/d"
         fi
     ;;
 
