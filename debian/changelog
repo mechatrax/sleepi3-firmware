@@ -1,3 +1,12 @@
+sleepi3-firmware (1.0.1.2) bookworm; urgency=medium
+
+  * debian/postrm: Update entry deletion in /boot/config.txt
+  * debian/control
+    - Add Uploaders
+    - Bump Standards-Version to 4.6.2
+
+ -- Yuta Kiyonaga <kiyonaga@mechatrax.com>  Tue, 03 Oct 2023 10:46:48 +0900
+
 sleepi3-firmware (1.0.1.1) bullseye; urgency=medium
 
   * debian/control: Update architecture
