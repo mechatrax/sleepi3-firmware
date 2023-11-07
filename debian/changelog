@@ -1,3 +1,10 @@
+sleepi3-firmware (1.0.1.1+deb11u1) bullseye; urgency=medium
+
+  * Fix device tree node
+  * debian/control: Add Uploaders
+
+ -- Masahiro Honda <honda@mechatrax.com>  Tue, 07 Nov 2023 19:33:08 +0900
+
 sleepi3-firmware (1.0.1.1) bullseye; urgency=medium
 
   * debian/control: Update architecture
