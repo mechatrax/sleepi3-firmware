@@ -4,7 +4,7 @@ slee-Pi 3 を動作させるためのファームウェアを提供します。
 ## 提供ファイル  
 次のファイルがパッケージに含まれています。
 
-### /boot/overlays/sleepi3.dtbo  
+### /boot/firmware/overlays/sleepi3.dtbo  
 slee-Pi 3 を動作させるための Device Tree Blob ファイルです。
 
 ### /usr/share/doc/sleepi3-firmware/copyright  
@@ -16,7 +16,7 @@ slee-Pi 3 を動作させるための Device Tree Blob ファイルです。
 ## 設定  
 インストール時に次のファイルが変更されます。
 
-### /boot/config.txt  
+### /boot/firmware/config.txt  
 次のエントリが追記されます。
 ```
 dtoverlay=sleepi3
@@ -50,5 +50,5 @@ dtoverlay=sleepi3
   ```
   i2c の周波数を固定します。  
   ```
-  raspi-config nonint set_config_var core_freq 250 /boot/config.txt
+  raspi-config nonint set_config_var core_freq 250 /boot/firmware/config.txt
   ```

@@ -6,7 +6,7 @@
 set -e
 
 DTBO=sleepi3.dtbo
-OVERLAY_DIR=/boot/overlays
+OVERLAY_DIR=/boot/firmware/overlays
 
 do_backup() {
     overlay=$1
