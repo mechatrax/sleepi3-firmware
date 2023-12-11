@@ -12,6 +12,8 @@ Homepage: https://mechatrax.com/
 Package: sleepi3-firmware
 Architecture: armhf arm64
 Conflicts: sleepi-firmware, sleepi2-firmware
-Depends: ${misc:Depends}, libraspberrypi-bin (>= 1.20160506-1), raspberrypi-bootloader (>= 1.20160506-1), raspi-config (>= 20160506)
+Recommends: linux-image-rpi-dummy | linux-image-rpi-v6 [armhf] | linux-image-rpi-v7 [armhf] | linux-image-rpi-v7l [armhf] | linux-image-rpi-v8 [armhf arm64] | linux-image-rpi-2712 [armhf arm64]
+Pre-Depends: mechatrax-firmware-dummy | raspi-firmware
+Depends: ${misc:Depends}, raspi-config (>=20160506)
 Description: Device tree overlay binary for slee-Pi 3
  This package contains the device tree overlay binary for slee-Pi 3.
