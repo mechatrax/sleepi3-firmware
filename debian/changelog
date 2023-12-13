@@ -1,3 +1,9 @@
+sleepi3-firmware (1.0.1.1+deb11u2) bullseye; urgency=low
+
+  * debian/copyright: Update contact information
+
+ -- Masahiro Honda <honda@mechatrax.com>  Mon, 11 Dec 2023 18:11:54 +0900
+
 sleepi3-firmware (1.0.1.1+deb11u1) bullseye; urgency=medium
 
   * Fix device tree node
