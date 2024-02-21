@@ -25,11 +25,11 @@
 				compatible = "microchip,mcp7941x";
 				reg = <0x6f>;
 				
-				pinctrl-name = "default";
+				pinctrl-names = "default";
 				pinctrl-0 = <&int_pin>;
 				gpios = <&gpio 26 0>;
 				
-				interrupt-name = "irq";
+				interrupt-names = "irq";
 				interrupt-parent = <&gpio>;
 				interrupts = <26 1>;
 			};
@@ -56,6 +56,7 @@
 		__overlay__ {
 			led_pin: led_pin5 {
 				brcm,pins = <5>;
+				brcm,function = <1>; /* 1:out */
 				brcm,pull = <0>; /* 0:none */
 			};
 		};
@@ -66,6 +67,7 @@
 		__overlay__ {
 			int_pin: int_pin26 {
 				brcm,pins = <26>;
+				brcm,function = <0>; /* 0:in */
 				brcm,pull = <0>; /* 0:none */
 			};
 		};
