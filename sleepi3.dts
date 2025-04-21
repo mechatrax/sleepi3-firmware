@@ -20,7 +20,7 @@
 		__overlay__ {
 			aliases {
 				rtc0 = &rtc_hwirq;
-				rtc1 = "/soc/rpi_rtc";
+				rtc1 = "/soc@107c000000/rpi_rtc";
 			};
 		};
 	};
@@ -51,7 +51,7 @@
 		__dormant__ {
 			aliases {
 				rtc0 = &rtc_noirq;
-				rtc1 = "/soc/rpi_rtc";
+				rtc1 = "/soc@107c000000/rpi_rtc";
 			};
 		};
 	};

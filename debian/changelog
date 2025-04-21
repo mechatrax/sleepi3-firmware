@@ -1,3 +1,9 @@
+sleepi3-firmware (2.0.3) bookworm; urgency=medium
+
+  * Fix device tree for Raspberry Pi 5
+
+ -- Yuta Kiyonaga <kiyonaga@mechatrax.com>  Mon, 21 Apr 2025 18:26:58 +0900
+
 sleepi3-firmware (2.0.2.1) bookworm; urgency=medium
 
   * debian/postinst: Remove software version validation in configuration process
