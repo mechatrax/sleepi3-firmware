@@ -114,14 +114,22 @@
 		};
 	};
 	
+	fragment@9 {
+		target-path = "/soc@107c000000/rpi_rtc";
+		__overlay__ {
+			status = "disabled";
+		};
+	};
+
 	__overrides__ {
-		heartbeat_pin = <&led0>,"gpios:4",
-				<&led_pin>,"brcm,pins:0";
-		noheartbeat =   <0>,"-5-7";
-		cpuheartbeat =  <0>,"+8";
-		interrupt_pin = <&rtc_hwirq>,"interrupts:0",
-				<&rtc_hwirq>,"gpios:4",
-				<&int_pin>,"brcm,pins:0";
-		nointerrupt =   <0>,"-1-2+3+4-6";
+		heartbeat_pin =  <&led0>,"gpios:4",
+				 <&led_pin>,"brcm,pins:0";
+		noheartbeat =    <0>,"-5-7";
+		cpuheartbeat =   <0>,"+8";
+		interrupt_pin =  <&rtc_hwirq>,"interrupts:0",
+				 <&rtc_hwirq>,"gpios:4",
+				 <&int_pin>,"brcm,pins:0";
+		nointerrupt =    <0>,"-1-2+3+4-6";
+		enable_rpi_rtc = <0>,"-9";
 	};
 };
