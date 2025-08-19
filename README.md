@@ -41,7 +41,7 @@ dtoverlay=sleepi3
 * nointerrupt  
   IRQ 信号の設定を無効にします。  
 
-* enable_rpi_rtc
+* enable_rpi_rtc  
   Raspberry Pi 5 の RTC を有効にします。  
 
 インストール時に次のコマンドが実行されます。
