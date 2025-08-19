@@ -14,7 +14,8 @@ slee-Pi 3 を動作させるための Device Tree Blob ファイルです。
 パッケージの変更点を記録したファイルです。
 
 ## 設定  
-インストール時に次のファイルが変更されます。
+インストール時に次のファイルが変更されます。  
+なお、Raspberry Pi 5 に搭載されている RTC は無効になります。  
 
 ### /boot/firmware/config.txt  
 次のエントリが追記されます。
@@ -40,6 +41,8 @@ dtoverlay=sleepi3
 * nointerrupt  
   IRQ 信号の設定を無効にします。  
 
+* enable_rpi_rtc
+  Raspberry Pi 5 の RTC を有効にします。  
 
 インストール時に次のコマンドが実行されます。
 
@@ -50,5 +53,5 @@ dtoverlay=sleepi3
   ```
   i2c の周波数を固定します。  
   ```
-  raspi-config nonint set_config_var core_freq 250 /boot/firmware/config.txt
+  raspi-config nonint set_config_var core_freq_fixed 1 /boot/firmware/config.txt
   ```
