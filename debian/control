@@ -3,8 +3,8 @@ Section: kernel
 Priority: optional
 Maintainer: Yuta Kiyonaga <kiyonaga@mechatrax.com>
 Uploaders: Masahiro Honda <honda@mechatrax.com>
-Build-Depends: debhelper-compat (= 12), device-tree-compiler
-Standards-Version: 4.6.2
+Build-Depends: debhelper-compat (= 13), device-tree-compiler
+Standards-Version: 4.7.2
 Vcs-Git: https://github.com/mechatrax/sleepi3-firmware.git
 Vcs-browser: https://github.com/mechatrax/sleepi3-firmware
 Homepage: https://mechatrax.com/
@@ -14,6 +14,6 @@ Architecture: armhf arm64
 Conflicts: sleepi-firmware, sleepi2-firmware
 Recommends: linux-image-rpi-dummy | linux-image-rpi-v6 (>=1:6.12) [armhf] | linux-image-rpi-v7 (>=1:6.12) [armhf] | linux-image-rpi-v7l (>=1:6.12)[armhf] | linux-image-rpi-v8 (>=1:6.12) [armhf arm64] | linux-image-rpi-2712 (>=1:6.12) [armhf arm64], sleepi3-dkms
 Pre-Depends: mechatrax-firmware-dummy | raspi-firmware
-Depends: ${misc:Depends}, raspi-config (>=20160506)
+Depends: ${misc:Depends}, raspi-config (>=20160506), util-linux-extra
 Description: Device tree overlay binary for slee-Pi 3
  This package contains the device tree overlay binary for slee-Pi 3.
