@@ -4,9 +4,8 @@ sleepi3-firmware (2.0.4.2) trixie; urgency=medium
   * debian/control
     - Bump Standards-Version to 4.7.2
     - Bump debhelper-compat to 13
-    - Add util-linux-extra to Depends for hwclock
 
- -- Yuta Kiyonaga <kiyonaga@mechatrax.com>  Wed, 29 Oct 2025 10:55:24 +0900
+ -- Yuta Kiyonaga <kiyonaga@mechatrax.com>  Fri, 31 Oct 2025 16:18:13 +0900
 
 sleepi3-firmware (2.0.4.1) bookworm; urgency=medium
 
