@@ -1,3 +1,9 @@
+sleepi3-firmware (2.0.4.3) trixie; urgency=medium
+
+  * debian/postinst: Set usb_max_current_enable=1 for Raspberry Pi 5
+
+ -- Yuta Kiyonaga <kiyonaga@mechatrax.com>  Thu, 21 May 2026 17:42:42 +0900
+
 sleepi3-firmware (2.0.4.2) trixie; urgency=medium
 
   * Update for trixie
