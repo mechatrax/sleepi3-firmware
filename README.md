@@ -55,3 +55,7 @@ dtoverlay=sleepi3
   ```
   raspi-config nonint set_config_var core_freq_fixed 1 /boot/firmware/config.txt
   ```
+  USB ポートの電流制限を緩和します（Raspberry Pi 5 用）。  
+  ```
+  raspi-config nonint set_config_var usb_max_current_enable 1 /boot/firmware/config.txt
+  ```
