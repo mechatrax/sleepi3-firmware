@@ -16,16 +16,6 @@
 	};
 
 	fragment@1 {
-		target-path="/";
-		__overlay__ {
-			aliases {
-				rtc0 = &rtc_hwirq;
-				rtc1 = "/soc@107c000000/rpi_rtc";
-			};
-		};
-	};
-
-	fragment@2 {
 		target = <&i2c_arm>;
 		__overlay__ {
 			#address-cells = <1>;
@@ -46,17 +36,7 @@
 		};
 	};
 	
-	fragment@3 {
-		target-path="/";
-		__dormant__ {
-			aliases {
-				rtc0 = &rtc_noirq;
-				rtc1 = "/soc@107c000000/rpi_rtc";
-			};
-		};
-	};
-
-	fragment@4 {
+	fragment@2 {
 		target = <&i2c_arm>;
 		__dormant__ {
 			#address-cells = <1>;
@@ -71,7 +51,7 @@
 		};
 	};
 	
-	fragment@5 {
+	fragment@3 {
 		target = <&gpio>;
 		__overlay__ {
 			led_pin: led_pin5 {
@@ -82,7 +62,7 @@
 		};
 	};
 	
-	fragment@6 {
+	fragment@4 {
 		target = <&gpio>;
 		__overlay__ {
 			int_pin: int_pin26 {
@@ -93,7 +73,7 @@
 		};
 	};
 	
-	fragment@7 {
+	fragment@5 {
 		target = <&leds>;
 		__overlay__ {
 			led0: led-sleepi {
@@ -106,7 +86,7 @@
 		};
 	};
 	
-	fragment@8 {
+	fragment@6 {
 		target = <&led0>;
 		__dormant__ {
 			linux,default-trigger = "heartbeat";
@@ -114,22 +94,14 @@
 		};
 	};
 	
-	fragment@9 {
-		target-path = "/soc@107c000000/rpi_rtc";
-		__overlay__ {
-			status = "disabled";
-		};
-	};
-
 	__overrides__ {
-		heartbeat_pin =  <&led0>,"gpios:4",
-				 <&led_pin>,"brcm,pins:0";
-		noheartbeat =    <0>,"-5-7";
-		cpuheartbeat =   <0>,"+8";
-		interrupt_pin =  <&rtc_hwirq>,"interrupts:0",
-				 <&rtc_hwirq>,"gpios:4",
-				 <&int_pin>,"brcm,pins:0";
-		nointerrupt =    <0>,"-1-2+3+4-6";
-		enable_rpi_rtc = <0>,"-9";
+		heartbeat_pin = <&led0>,"gpios:4",
+				<&led_pin>,"brcm,pins:0";
+		noheartbeat =   <0>,"-3-5";
+		cpuheartbeat =  <0>,"+6";
+		interrupt_pin = <&rtc_hwirq>,"interrupts:0",
+				<&rtc_hwirq>,"gpios:4",
+				<&int_pin>,"brcm,pins:0";
+		nointerrupt =   <0>,"-1+2-4";
 	};
 };
