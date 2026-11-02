@@ -23,6 +23,15 @@ slee-Pi 3 を動作させるための Device Tree Blob ファイルです。
 dtoverlay=sleepi3
 ```
 
+Raspberry Pi 5 では内蔵 RTC と slee-Pi 3 の RTC が競合しないように、[pi5] セクションに次のエントリが追記されます。
+```
+[pi5]
+dtparam=rtc=off
+```
+
+Raspberry Pi 5 の内蔵 RTC を使う場合は、この行をコメントアウトしてください。  
+パッケージを削除しても dtparam=rtc=off は削除されません。
+
 次のパラメータが指定可能です。
 * heartbeat_pin=\<n\>  
   HEARTBEAT 信号の割り当てを変更します。  
@@ -40,9 +49,6 @@ dtoverlay=sleepi3
 
 * nointerrupt  
   IRQ 信号の設定を無効にします。  
-
-* enable_rpi_rtc  
-  Raspberry Pi 5 の RTC を有効にします。  
 
 インストール時に次のコマンドが実行されます。
 

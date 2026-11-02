@@ -1,3 +1,13 @@
+sleepi3-firmware (2.0.5) trixie; urgency=medium
+
+  * Use dtparam instead of device tree to disable RTC on Pi 5
+  * sleepi3.dts
+    - Remove rtc aliases and rpi_rtc fragment
+    - Remove enable_rpi_rtc parameter
+  * debian/postinst: Add dtparam=rtc=off to [pi5] section
+
+ -- Yuta Kiyonaga <kiyonaga@mechatrax.com>  Mon, 26 Oct 2026 17:13:48 +0900
+
 sleepi3-firmware (2.0.4.3) trixie; urgency=medium
 
   * debian/postinst: Set usb_max_current_enable=1 for Raspberry Pi 5

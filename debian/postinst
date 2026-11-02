@@ -23,6 +23,16 @@ case "$1" in
                     printf "dtoverlay=${OVERLAY}\n" >> $CONFIG_FILE
                 fi
             fi
+
+            if ! grep -q -E "^[[:space:]]*#*[[:space:]]*dtparam=rtc=off" $CONFIG_FILE; then
+                if grep -q "^\[pi5\]" $CONFIG_FILE; then
+                    sed -i '/^\[pi5\]/a dtparam=rtc=off' $CONFIG_FILE
+                elif grep -q "^\[all\]" $CONFIG_FILE; then
+                    sed -i '/^\[all\]/i \[pi5]\ndtparam=rtc=off\n' $CONFIG_FILE
+                else
+                    printf '\n[pi5]\ndtparam=rtc=off\n\n[all]\n' >> $CONFIG_FILE
+                fi
+            fi
         fi
     ;;
 
